@@ -12,6 +12,7 @@
 		EB905D15203F335500535050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB905D13203F335500535050 /* Main.storyboard */; };
 		EB905D17203F335500535050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB905D16203F335500535050 /* Assets.xcassets */; };
 		EB905D1A203F335500535050 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB905D18203F335500535050 /* LaunchScreen.storyboard */; };
+		EB905D232040094A00535050 /* NFChelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB905D222040094A00535050 /* NFChelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		EB905D16203F335500535050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB905D19203F335500535050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB905D1B203F335500535050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB905D21203FF55E00535050 /* NFCexperiment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCexperiment.entitlements; sourceTree = "<group>"; };
+		EB905D222040094A00535050 /* NFChelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFChelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +57,14 @@
 		EB905D0E203F335500535050 /* NFCexperiment */ = {
 			isa = PBXGroup;
 			children = (
+				EB905D21203FF55E00535050 /* NFCexperiment.entitlements */,
 				EB905D0F203F335500535050 /* AppDelegate.swift */,
 				EB905D11203F335500535050 /* ViewController.swift */,
 				EB905D13203F335500535050 /* Main.storyboard */,
 				EB905D16203F335500535050 /* Assets.xcassets */,
 				EB905D18203F335500535050 /* LaunchScreen.storyboard */,
 				EB905D1B203F335500535050 /* Info.plist */,
+				EB905D222040094A00535050 /* NFChelper.swift */,
 			);
 			path = NFCexperiment;
 			sourceTree = "<group>";
@@ -97,6 +102,11 @@
 					EB905D0B203F335500535050 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.NearFieldCommunicationTagReading = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -138,6 +148,7 @@
 			files = (
 				EB905D12203F335500535050 /* ViewController.swift in Sources */,
 				EB905D10203F335500535050 /* AppDelegate.swift in Sources */,
+				EB905D232040094A00535050 /* NFChelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCexperiment/NFCexperiment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 848B6K27TX;
 				INFOPLIST_FILE = NFCexperiment/Info.plist;
@@ -289,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NFCexperiment/NFCexperiment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 848B6K27TX;
 				INFOPLIST_FILE = NFCexperiment/Info.plist;
